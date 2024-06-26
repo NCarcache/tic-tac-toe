@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap");
+
+:root {
+  color: #eee;
+  font-family: "Open Sans", sans-serif;
+  background: #4a569d;
+  background: -webkit-linear-gradient(to left, #4a569d, #dc2424);
+  background: linear-gradient(to left, #4a569d, #dc2424);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* reset */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.game {
+  width: fit-content;
+  text-align: center;
+}
+
+.game-title {
+  color: #eee;
+  margin-bottom: 32px;
+  font-size: 48px;
+}
+
+.board, .turn {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.turn {
+  position: relative;
+}
+
+.turn-title {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+}
+
+.turn-button {
+  box-shadow: 4px 4px 4px 0px #0e0e0e;
+  background-color: #161515;
+  padding: 6px 8px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.turn-button:hover {
+  background-color: #272525;
+}
+
+.winner {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0000009e;
+}
+
+.winner-modal {
+  background: #161515;
+  height: 300px;
+  width: 320px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.winner-emoji {
+  font-size: 56px;
+}
+
+.winner-button {
+  background-color: #b2568d;
+  padding: 6px 8px;
+  border: none;
+  border-radius: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 6px 6px 4px 1px #0e0e0e;
+}
+
+.winner-button:hover {
+  background-color: #d185b3;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 48px;
+  background-color: #161515;
+  box-shadow: 6px 6px 4px 1px #0e0e0e;
+}
+
+.material-symbols-outlined {
+  color: #eee;
+  font-weight: 400;
+  display: block;
+}
